@@ -98,6 +98,7 @@ def a_star(graph, start_node, target_node, h):
         print("popped node: ", poped_node, "current node: ", current_node, "cost: ", cost, "path: ", path_followed)
 
         if current_node == target_node:
+            os.system('cls')
             return poped_node
         
         for child in graph[current_node]:
@@ -127,5 +128,6 @@ h3 = {
     "C": 3,
     "G": 0
 }
+
 
 print(a_star(graph, "S", "G", h3))

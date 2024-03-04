@@ -1,0 +1,1 @@
+input_graph = input_li[0]
