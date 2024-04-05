@@ -1,0 +1,17 @@
+7 A
+A B C
+B D E
+C F G
+D H I
+E J K 
+F L M
+G N O
+8
+H -1
+I 4
+J 2
+K 6
+L -3
+M -5
+N 0
+O 7

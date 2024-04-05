@@ -34,7 +34,7 @@ def minimax(input_graph, current_node, final_node_value, state, alpha, beta):
                 break
         return v
     
-input_graph, terminal_state_value, all_node = file_to_graph1.file_to_graph("C:\\Users\\Acer\\OneDrive\\Desktop\\3111\\L8 Alpha Beta\\input_text1.txt")
+input_graph, terminal_state_value, all_node = file_to_graph1.file_to_graph("C:\\Users\\Acer\\OneDrive\\Desktop\\3111\\L8 Alpha Beta\\input_text2.txt")
 v = minimax(input_graph, "A", terminal_state_value, True, float("-inf"), float("inf"))
 print(v)
 print("path_followed: ",traverse_node)
