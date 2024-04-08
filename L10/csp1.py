@@ -2,37 +2,37 @@
 import sys
 import time
 
-neighbors = {
-    'WA' : ['NT', 'SA'],
-    'NT' : ['WA', 'SA', 'Q'],
-    'SA' : ['WA', 'NT', 'Q', 'NSW', 'V'],
-    'Q' :  ['NT', 'SA', 'NSW'],
-    'NSW' :  ['Q', 'SA','V'],
-    'V' :  ['NSW', 'SA'],
-    'T' :  ['']
-}
-
-colors = ['Red', 'Green', 'Blue']
-
-states = ['WA', 'NT', 'SA', 'Q', 'NSW', 'V', 'T']
-
-
-
-
-
 # neighbors = {
-#     'A': ['B','D','E'],
-#     'B': ['A','E','F','C'],
-#     'C': ['B','F'],
-#     'D': ['A','E','G','H'],
-#     'E': ['A','B','D','F','H','I'],
-#     'F': ['B','C','E','I'],
-#     'G': ['D','H'],
-#     'H': ['D','E','G','I'],
-#     'I': ['E','F','H']
+#     'WA' : ['NT', 'SA'],
+#     'NT' : ['WA', 'SA', 'Q'],
+#     'SA' : ['WA', 'NT', 'Q', 'NSW', 'V'],
+#     'Q' :  ['NT', 'SA', 'NSW'],
+#     'NSW' :  ['Q', 'SA','V'],
+#     'V' :  ['NSW', 'SA'],
+#     'T' :  ['']
 # }
-# colors = ['Blue', 'Red', 'Green']
-# states = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
+
+# colors = ['Red', 'Green', 'Blue']
+
+# states = ['WA', 'NT', 'SA', 'Q', 'NSW', 'V', 'T']
+
+
+
+
+
+neighbors = {
+    'A': ['B','D','E'],
+    'B': ['A','E','F','C'],
+    'C': ['B','F'],
+    'D': ['A','E','G','H'],
+    'E': ['A','B','D','F','H','I'],
+    'F': ['B','C','E','I'],
+    'G': ['D','H'],
+    'H': ['D','E','G','I'],
+    'I': ['E','F','H']
+}
+colors = ['Blue', 'Red', 'Green']
+states = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
 
 # neighbors = {
 #     'A': ['B', 'V'],
@@ -70,7 +70,6 @@ states = ['WA', 'NT', 'SA', 'Q', 'NSW', 'V', 'T']
 
 
 states_where_made_decision_optional = {}
-
 colors_of_states = {}
 
 
@@ -158,6 +157,7 @@ while start_state_index < len(states):
     output = return_the_valid_color(state,start_color_index)
     print("State: ", state, " Output: ", output)
     #time.sleep(1)
+    input("Press Enter to continue...")
     if output[0] == 'backtrack':
         start_state_index = states.index(output[1])
         start_color_index = colors.index(output[2])+1
@@ -167,6 +167,7 @@ while start_state_index < len(states):
         start_color_index = 0
         colors_of_states[state] = output
         start_state_index += 1
+    print ("where decision made optionally: ",states_where_made_decision_optional)  
 
 
 print ("where decision made optionally: ",states_where_made_decision_optional)  
