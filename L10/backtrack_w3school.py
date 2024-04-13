@@ -57,6 +57,7 @@ class CSP:
         #this will return the variable with the smallest domain
 
 	def order_domain_values(self, var, assignment): 
+		#print("order_domain_values: ",self.domains[var])
 		return self.domains[var] 
 
 	def is_consistent(self, var, value, assignment): 
