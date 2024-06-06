@@ -167,11 +167,10 @@ def calculate_mdp(grid, noise, discount, living_reward, k):
         return new_grid_v1
                     
 
-grid1 = Grid(number_of_rows=3, number_of_columns=4, terminal_index=[[0,3],[1,3]])
-grid1.add_column(0, [0, 0, 0])
-grid1.add_column(1, [0, None, 0])
-grid1.add_column(2, [0, 0, 0])
-grid1.add_column(3, [+1, -1, 0])
+grid1 = Grid(number_of_rows=2, number_of_columns=3, terminal_index=[[1,2]])
+grid1.add_column(0, [0, 0])
+grid1.add_column(1, [0, 0])
+grid1.add_column(2, [0, +1])
 print(grid1.grid)
 
-calculate_mdp(grid = grid1,  noise=0.2, discount=0.9, living_reward=0, k=100)
+calculate_mdp(grid = grid1,  noise=0, discount=0.5, living_reward=0, k=100)
